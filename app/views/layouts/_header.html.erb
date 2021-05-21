@@ -1,4 +1,3 @@
-新規登録、ログイン、アカウント編集、ログアウト
 <% if user_signed_in? %>
   <%= link_to "アカウント編集", edit_user_registration_path %>
   <%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: { confirm: "ログアウトしますか？" } %>
