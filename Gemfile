@@ -20,6 +20,8 @@ group :development, :test do
   gem "pry-byebug"
   gem "pry-doc"
   gem "pry-rails"
+
+  gem "devise"
 end
 
 group :development do
