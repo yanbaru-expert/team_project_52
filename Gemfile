@@ -22,6 +22,8 @@ group :development, :test do
   gem "pry-rails"
 
   gem "devise"
+  gem "devise-i18n"
+  gem "rails-i18n", "~> 6.0"
 end
 
 group :development do
