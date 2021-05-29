@@ -1,15 +1,18 @@
-@charset "UTF-8";
 /*
  *= require_tree .
  *= require_self
  */
-/* 全体 */
+ @import "bootstrap/scss/bootstrap";
+
+ /* 全体 */ 
+
 .base-container {
   margin: 0 auto;
   padding: 1rem;
 }
 
-/* max-width */
+/* max-width */ 
+
 .mw-sm {
   max-width: 576px;
 }
