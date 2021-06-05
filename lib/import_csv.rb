@@ -13,12 +13,21 @@ class ImportCsv
     list
   end
 
-  def self.user_data
+  def self.text_data
     # importクラスメソッドを呼び出し，ユーザーデータの配列を生成
-    list = import("db/csv_data/user_data.csv")
+    list = import("db/csv_data/text_data.csv")
 
     puts "インポート処理を開始"
-    User.create!(list)
+    Text.create!(list)
+    puts "インポート完了!"
+  end
+
+  def self.movie_data
+    # importクラスメソッドを呼び出し，ユーザーデータの配列を生成
+    list = import("db/csv_data/movie_data.csv")
+
+    puts "インポート処理を開始"
+    Movie.create!(list)
     puts "インポート完了!"
   end
 end

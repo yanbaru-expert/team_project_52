@@ -11,3 +11,11 @@ end
 %w[texts movies].each do |table_name|
   ActiveRecord::Base.connection.execute("TRUNCATE TABLE #{table_name} RESTART IDENTITY CASCADE")
 end
+
+# ImportCsvクラスを読み込む
+require "import_csv"
+# CSVファイルのインポート/lib/import_csv.rbに処理を記述
+ImportCsv.text_data
+ImportCsv.movie_data
+
+puts "CSVファイルのインポートをしました"
