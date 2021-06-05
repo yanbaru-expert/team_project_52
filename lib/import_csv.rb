@@ -14,7 +14,7 @@ class ImportCsv
   end
 
   def self.text_data
-    # importクラスメソッドを呼び出し，ユーザーデータの配列を生成
+    # importクラスメソッドを呼び出し，テキストデータの配列を生成
     list = import("db/csv_data/text_data.csv")
 
     puts "インポート処理を開始"
@@ -23,7 +23,7 @@ class ImportCsv
   end
 
   def self.movie_data
-    # importクラスメソッドを呼び出し，ユーザーデータの配列を生成
+    # importクラスメソッドを呼び出し，ムービーデータの配列を生成
     list = import("db/csv_data/movie_data.csv")
 
     puts "インポート処理を開始"
