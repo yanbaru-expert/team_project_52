@@ -6,15 +6,6 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">アカウント編集<span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">ログアウト</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">ログアウト</a>
-      </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Ruby
@@ -29,8 +20,8 @@
           PHP
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">PHPテキスト教材</a>
-          <a class="dropdown-item" href="#">PHP動画教材</a>
+          <%= link_to "PHPテキスト教材", "http://localhost:3000/texts?genre=php", class: "dropdown-item" %>
+          <%= link_to "PHP動画教材", "http://localhost:3000/movies?genre=php", class: "dropdown-item" %>
         </div>
       </li>
       <% if user_signed_in? %>
