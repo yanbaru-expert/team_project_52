@@ -7,22 +7,39 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">アカウント編集<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="#">ログアウト</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">ログアウト</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
+          Ruby
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <%= link_to "Ruby/Railsテキスト教材", "http://localhost:3000/texts", class: "dropdown-item" %>
+          <%= link_to "Ruby/Rails動画教材", "http://localhost:3000/movies", class: "dropdown-item" %>
         </div>
       </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          PHP
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">PHPテキスト教材</a>
+          <a class="dropdown-item" href="#">PHP動画教材</a>
+        </div>
+      </li>
+      <% if user_signed_in? %>
+        <%= link_to "アカウント編集", edit_user_registration_path, class: "nav-item nav-link active" %>
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: { confirm: "ログアウトしますか？" }, class: "nav-item nav-link active" %>
+      <% else %>
+        <%= link_to "新規登録", new_user_registration_path, class: "nav-item nav-link active" %>
+        <%= link_to "ログイン", new_user_session_path, class: "nav-item nav-link active" %>
+      <% end %>
       <li class="nav-item">
         <a class="nav-link disabled" href="#">Disabled</a>
       </li>
