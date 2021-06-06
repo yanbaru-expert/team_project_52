@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-md navbar-light bg-primary fixed-top">
-  <a class="navbar-brand" href="#"><%= image_tag("yanbaru_expert_logo.png") %></a>
+  <%= link_to image_tag("yanbaru_expert_logo.png", class: "navbar-brand"), "http://localhost:3000" %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -31,9 +31,6 @@
         <%= link_to "新規登録", new_user_registration_path, class: "nav-item nav-link active" %>
         <%= link_to "ログイン", new_user_session_path, class: "nav-item nav-link active" %>
       <% end %>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
     </ul>
   </div>
 </nav>
