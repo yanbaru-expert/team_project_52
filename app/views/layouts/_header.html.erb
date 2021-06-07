@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-md navbar-light bg-primary fixed-top">
-  <%= link_to image_tag("yanbaru_expert_logo.png", class: "navbar-brand"), "http://localhost:3000" %>
+  <%= link_to image_tag("yanbaru_expert_logo.png", class: "navbar-brand"), root_path %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -11,8 +11,8 @@
           Ruby
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <%= link_to "Ruby/Railsテキスト教材", "http://localhost:3000/texts", class: "dropdown-item" %>
-          <%= link_to "Ruby/Rails動画教材", "http://localhost:3000/movies", class: "dropdown-item" %>
+          <%= link_to "Ruby/Railsテキスト教材", texts_path, class: "dropdown-item" %>
+          <%= link_to "Ruby/Rails動画教材", movies_path, class: "dropdown-item" %>
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -20,8 +20,8 @@
           PHP
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <%= link_to "PHPテキスト教材", "http://localhost:3000/texts?genre=php", class: "dropdown-item" %>
-          <%= link_to "PHP動画教材", "http://localhost:3000/movies?genre=php", class: "dropdown-item" %>
+          <%= link_to "PHPテキスト教材", texts_path(genre: "php"), class: "dropdown-item" %>
+          <%= link_to "PHP動画教材", movies_path(genre: "php"), class: "dropdown-item" %>
         </div>
       </li>
       <% if user_signed_in? %>
