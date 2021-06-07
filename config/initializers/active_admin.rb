@@ -18,6 +18,9 @@ ActiveAdmin.setup do |config|
   #
   # config.site_title_image = "logo.png"
 
+  # 通常ログインしなくても管理者ログインできるように設定
+  config.skip_before_action :authenticate_user!
+
   # == Default Namespace
   #
   # Set the default namespace each administration resource

@@ -11,7 +11,7 @@ end
 # 条件を指定して最初の１件を取得、１件もなければ作成
 AdminUser.find_or_create_by!(email: admin_email) do |admin_user|
   admin_user.password = password
-  puts "CSVファイルのインポートをしました"
+  puts "管理者ユーザーのCSVファイルのインポートをしました"
 end
 
 # texts, movies テーブルを再生成（関連付くテーブルを含む）
