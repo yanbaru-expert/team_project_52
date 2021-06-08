@@ -30,8 +30,11 @@
   max-width: 1200px;
 }
 
-// フラッシュ
+body {
+  padding-top: 69px;
+}
 
+// フラッシュ
 .alert-notice {
   @extend .alert-success;
 }
