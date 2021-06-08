@@ -2,17 +2,16 @@
  *= require_tree .
  *= require_self
  */
- @import "bootstrap/scss/bootstrap";
+@import 'bootstrap/scss/bootstrap';
 
-
- /* 全体 */ 
+/* 全体 */
 
 .base-container {
   margin: 0 auto;
   padding: 1rem;
 }
 
-/* max-width */ 
+/* max-width */
 
 .mw-sm {
   max-width: 576px;
@@ -41,4 +40,9 @@ body {
 
 .alert-alert {
   @extend .alert-danger;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
 }
