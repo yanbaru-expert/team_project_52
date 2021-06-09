@@ -1,4 +1,7 @@
 <div class="form-group">
+  <%- if controller_name != 'seesions'%>
+    <%= link_to "ゲストログイン（閲覧用）", users_guest_sign_in_path, method: :post,  class: "btn btn-block btn-success form-control my-3 text-white'" %>
+  <% end -%>
   <%- if controller_name != 'sessions' %>
     <%= link_to t(".sign_in"), new_session_path(resource_name), class: 'btn btn-block btn-secondary form-control my-3 text-white' %><br />
   <% end -%>
