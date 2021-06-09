@@ -1,11 +1,11 @@
-<div class="card col-sm-6 col-md-4" style="width: 18rem;">
-  <div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" src="<%= movie.url %>" allowfullscreen></iframe>
-  </div>
-  <div class="card-body">
-    <h6 class="card-title">Lv.<%= "#{movie_counter +1}" %>：<%= movie.title %></h6>
-    <p class="card-text"><%= movie.genre %>だよ</p>
-    <p class="card-text"><%= movie.url %></p>
-    <a href="#" class="btn btn-primary">読破済みにする</a>
+<div class="col-sm-6 col-md-4">
+  <div class="card border:2px">
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe class="embed-responsive-item" src="<%= movie.url %>" allowfullscreen></iframe>
+    </div>
+    <div class="card-body">
+      <a href="#" class="btn btn-primary">読</a>
+      <p class="card-title">Lv.<%= "#{movie_counter +1}" %>：<%= movie.title %></p>
+    </div>
   </div>
 </div>
