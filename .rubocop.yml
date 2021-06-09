@@ -44,7 +44,7 @@ Style/SymbolArray:
 Metrics/BlockLength:
   Exclude:
     - 'app/admin/*'
-    - "config/environments/**/*"
+    - 'config/environments/**/*'
 
 Rails/Output:
   Exclude:
