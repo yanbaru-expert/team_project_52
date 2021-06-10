@@ -1,6 +1,6 @@
 class TextsController < ApplicationController
   def index
-    @texts = Text.where.not(genre: "php").order(id: :asc)
+    @texts = Text.where(genre: Text::RAILS_GENRE_LIST).order(id: :asc)
   end
 
   def show; end
