@@ -1,13 +1,13 @@
 <div class="card_area col-12 col-md-6 col-lg-4">
-  <div class="card mx-auto">
+  <div class="card mx-auto" id="text-<%= text.id %>">
     <img src="https://d5izmuz0mcjzz.cloudfront.net/texts/no_image.jpg" class="card-img-top" alt="カードの画像">
     <div class="card-body">
-      <div class="row mx-auto" id="text-<%= @text.id　%>">
+      <div class="row mx-auto">
         
-        <% if @text.read_progressed_by?(current_user) %>
-        <%= render "read_progress", post: @text %>
+        <% if text.read_progressed_by?(current_user) %>
+        <%= render "read_progress", post: text %>
         <% else %>
-        <%= render "disread_progress", post: @text %>
+        <%= render "disread_progress", post: text %>
         <% end %>
         
       </div>
