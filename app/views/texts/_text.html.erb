@@ -2,8 +2,14 @@
   <div class="card mx-auto">
     <img src="https://d5izmuz0mcjzz.cloudfront.net/texts/no_image.jpg" class="card-img-top" alt="カードの画像">
     <div class="card-body">
-      <div class="row mx-auto">
-      <a href="#" class="btn bg-secondary w-100" style = "color: white;">読破済みボタン</a>
+      <div class="row mx-auto" id="text-<%= @text.id　%>">
+        
+        <% if @text.read_progressed_by?(current_user) %>
+        <%= render "read_progress", post: @text %>
+        <% else %>
+        <%= render "disread_progress", post: @text %>
+        <% end %>
+        
       </div>
       <h5 class="card-title"><%= text.title %></h5>
       <p class="card-text">【<%= text.genre %>】</p>
