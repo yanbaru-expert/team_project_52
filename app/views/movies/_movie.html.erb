@@ -1,4 +1,4 @@
-<% @movies.each.with_index(1) do |movie, index| %>
+<% @movies.each.with_index(@movies.offset_value + 1) do |movie, index| %>
   <div class="card-base col-sm-6 col-md-4">
     <div class="card border-dark">
       <div class="embed-responsive embed-responsive-16by9">
