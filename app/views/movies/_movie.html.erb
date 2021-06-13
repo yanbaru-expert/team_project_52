@@ -1,11 +1,13 @@
-<div class="card-base col-sm-6 col-md-4">
-  <div class="card border-dark">
-    <div class="embed-responsive embed-responsive-16by9">
-      <iframe class="embed-responsive-item" src="<%= movie.url %>" allowfullscreen></iframe>
-    </div>
-    <div class="card-body rails-card-body">
-      <a href="#" class="btn btn-dokuha btn-secondary">読破済みにする</a>
-      <p class="card-title rails-card-title">Lv.<%= "#{movie_counter +1}" %>：<%= movie.title %></p>
+<% @movies.each.with_index(1) do |movie, index| %>
+  <div class="card-base col-sm-6 col-md-4">
+    <div class="card border-dark">
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="<%= movie.url %>" allowfullscreen></iframe>
+      </div>
+      <div class="card-body rails-card-body">
+        <a href="#" class="btn btn-dokuha btn-secondary">読破済みにする</a>
+        <p class="card-title rails-card-title">Lv.<%= "#{@movie_counter + index}" %>：<%= movie.title %></p>
+      </div>
     </div>
   </div>
-</div>
+<% end %>
