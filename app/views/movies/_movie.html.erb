@@ -4,6 +4,13 @@
       <iframe class="embed-responsive-item" src="<%= movie.url %>" allowfullscreen></iframe>
     </div>
     <div class="card-body rails-card-body">
+      <p>
+        <% if movie.watched_by?(current_user) %>
+          watched
+        <% else %>
+          not watched
+        <% end %>
+      </p>
       <a href="#" class="btn btn-dokuha btn-secondary">読破済みにする</a>
       <p class="card-title rails-card-title">Lv.<%= "#{movie_counter +1}" %>：<%= movie.title %></p>
     </div>
