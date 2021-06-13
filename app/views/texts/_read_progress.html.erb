@@ -1,1 +1,1 @@
-<a href="/texts/<%= :text_id %>/read_progresses" data-method="delete" class="btn bg-primary w-100" style = "color: white;">読破済みを解除</a>
+<%= link_to "読破済みを解除", text_read_progresses_path(text), method: :delete, remote: true, class: "btn bg-primary w-100 text-white" %>

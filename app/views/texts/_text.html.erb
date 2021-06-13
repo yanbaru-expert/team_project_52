@@ -5,9 +5,9 @@
       <div class="row mx-auto">
         
         <% if text.read_progressed_by?(current_user) %>
-        <%= render "read_progress", post: text %>
+        <%= render partial: "read_progress", locals: { text: text } %>
         <% else %>
-        <%= render "disread_progress", post: text %>
+        <%= render partial: "disread_progress", locals: { text: text } %>
         <% end %>
         
       </div>
