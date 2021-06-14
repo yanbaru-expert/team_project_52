@@ -5,6 +5,24 @@ class Movie < ApplicationRecord
     watch_progresses.any? { |watch_progress| watch_progress.user_id == user.id }
   end
 
+  def self.genre_classification(genre)
+    if genre == "php"
+      where(genre: :php).includes(:watch_progresses)
+      # @title = "PHP動画"
+    else
+      where(genre: Movie::RAILS_GENRE_LIST).includes(:watch_progresses)
+      # @title = "Ruby/Rails 動画"
+    end
+  end
+
+  def page_title
+    if genre == "php"
+      "php"
+    else
+      "rails"
+    end
+  end
+
   with_options presence: true do
     validates :genre
     validates :title
