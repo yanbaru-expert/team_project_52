@@ -39,3 +39,6 @@ gem "activeadmin"
 gem "devise-bootstrap-views", "~> 1.0"
 gem "kaminari"
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem "redcarpet"
+gem "rouge"
