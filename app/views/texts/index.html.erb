@@ -1,9 +1,8 @@
-<h1>Ruby/Rails テキスト教材</h1>
-  <thead>
-    
-  </thead>
-  <tbody>
-        <div class="row">
-          <%= render @texts %>
-        </div>
-  </tbody>
+<h1><%= page_title(params[:genre]) %>テキスト教材</h1>
+<thead>
+</thead>
+<tbody>
+  <div class="row">
+    <%= render @texts %>
+  </div>
+</tbody>

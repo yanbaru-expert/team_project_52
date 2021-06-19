@@ -11,6 +11,6 @@ module ApplicationHelper
   end
 
   def page_title(genre)
-    genre == "php" ? "PHP動画" : "Ruby/Rails 動画"
+    genre == "php" ? "PHP" : "Ruby/Rails"
   end
 end
