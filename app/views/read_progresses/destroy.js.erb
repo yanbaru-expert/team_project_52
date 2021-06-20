@@ -1,1 +1,1 @@
-document.getElementById('text-<%= @text.id %>').innerHTML = '<%= j render("texts/disread_progress", post: @text) %>'
+document.getElementById('text-<%= @text.id %>').innerHTML = '<%= j render("texts/disread_progress", text: @text) %>'
