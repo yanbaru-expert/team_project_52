@@ -1,4 +1,18 @@
 class Movie < ApplicationRecord
+  has_many :watch_progresses, dependent: :destroy
+
+  def watched_by?(user)
+    watch_progresses.any? { |watch_progress| watch_progress.user_id == user.id }
+  end
+
+  def self.genre_classification(genre)
+    if genre == "php"
+      where(genre: :php).includes(:watch_progresses)
+    else
+      where(genre: Movie::RAILS_GENRE_LIST).includes(:watch_progresses)
+    end
+  end
+
   with_options presence: true do
     validates :genre
     validates :title

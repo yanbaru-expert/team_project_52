@@ -1,7 +1,9 @@
 class TextsController < ApplicationController
   def index
-    @texts = Text.where(genre: Text::RAILS_GENRE_LIST).includes(:read_progresses).order(id: :asc)
+    @texts = Text.genre_classification(params[:genre]).order(id: :asc)
   end
 
-  def show; end
+  def show
+    @text = Text.find_by(id: params[:id])
+  end
 end
