@@ -1,21 +1,21 @@
 ja:
   activerecord:
     models:
-      movie:  動画教材
+      movie: 動画教材
       text: テキスト教材
       read_progress: 読破済み
     attributes:
       movie:
-        genre:  ジャンル
+        genre: ジャンル
         title: タイトル
-        url:  URL
+        url: URL
       text:
-        genre:  ジャンル
+        genre: ジャンル
         title: タイトル
         content: 内容
-      read_progress:
-      　user: ユーザー
-      　text: テキスト教材
+    　read_progress:
+        user: ユーザー
+        text: テキスト教材
       watch_progress:
         user: ユーザー
         movie: 動画教材
