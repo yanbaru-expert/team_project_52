@@ -42,3 +42,7 @@ gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "redcarpet"
 gem "rouge"
+
+group :development, :production, :test do
+  gem "devise"
+end
