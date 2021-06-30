@@ -1,0 +1,8 @@
+<h1><%= page_title(params[:genre]) %>テキスト教材</h1>
+<thead>
+</thead>
+<tbody>
+  <div class="row">
+    <%= render partial: "text", collection: @texts %>
+  </div>
+</tbody>

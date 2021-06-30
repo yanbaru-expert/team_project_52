@@ -1,0 +1,14 @@
+ja:
+  genre: &genre
+    invisible: '非表示'
+    basic: 'Basic'
+    git: 'Git'
+    ruby: 'Ruby'
+    rails: 'Ruby on Rails'
+    php: 'PHP'
+
+  enums:
+    text:
+      genre: *genre
+    movie:
+      genre: *genre

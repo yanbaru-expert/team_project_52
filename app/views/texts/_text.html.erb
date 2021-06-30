@@ -1,0 +1,21 @@
+<div class="card_area col-12 col-md-6 col-lg-4">
+  <%= link_to text  do %>
+  <div class="card mx-auto">
+    <img src="https://d5izmuz0mcjzz.cloudfront.net/texts/no_image.jpg" class="card-img-top" alt="カードの画像">
+    <div class="card-body">
+      
+      <div class="row mx-auto" id="text-<%= text.id %>">
+        <% if text.read_progressed_by?(current_user) %>
+        <%= render partial: "read_progress", locals: { text: text } %>
+        <% else %>
+        <%= render partial: "disread_progress", locals: { text: text } %>
+        <% end %>
+      </div>
+      
+      <h5 class="card-title"><%= text.title %></h5>
+      <p class="card-text">【<%= text.genre %>】</p>
+      
+    </div>
+  </div>
+  <% end %>
+</div>

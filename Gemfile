@@ -4,6 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "2.7.3"
 
 gem "bootsnap", ">= 1.4.4", require: false
+gem "enum_help"
 gem "jbuilder", "~> 2.7"
 gem "pg", "~> 1.1"
 gem "puma", "~> 5.0"
@@ -16,6 +17,13 @@ group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   gem "rubocop-performance", require: false
   gem "rubocop-rails", require: false
+
+  gem "devise"
+  gem "devise-i18n"
+  gem "pry-byebug"
+  gem "pry-doc"
+  gem "pry-rails"
+  gem "rails-i18n", "~> 6.0"
 end
 
 group :development do
@@ -26,4 +34,10 @@ group :development do
   gem "web-console", ">= 4.1.0"
 end
 
+gem "activeadmin"
+gem "devise-bootstrap-views", "~> 1.0"
+gem "kaminari"
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem "redcarpet"
+gem "rouge"
